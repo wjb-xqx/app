@@ -56,16 +56,58 @@
 
         <!-- 个人信息设置 -->
         <transition>
-            <div class="userInfo clearfix" >
-                <!-- v-show="flag" -->
+            <div class="userInfo clearfix" v-show="flag">
                 <div class="hearder clearfix">
                     <div class="use">
                         <span class="img">
                             <img src="@/assets/images/user.png" alt="">
                         </span>
                         <span class="name">A酷酷的旧爱A酷酷的旧爱</span>
-                     </div>
+                        <img src="@/assets/images/nav_r2_c2.png" alt="" class="imgTop">
+                    </div>
+                    <div class="Sign fr">
+                        <img src="@/assets/images/nav_r2_c3.png" alt="" class="imgTop">
+                        <p><span>签到</span></p>
+                    </div>
                 </div>
+                <ul class="list">
+                    <li>
+                        <i class="iconfont">&#xe65f;</i>
+                        我的收藏
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe613;</i>
+                        我的话题
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe622;</i>
+                        我的下载
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe76e;</i>
+                        浏览历史
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe604;</i>
+                        我的勋章
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe603;</i>
+                        交易屋
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe663;</i>
+                        游戏中心
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe64c;</i>
+                        糖果商城
+                    </li>
+                    <li class="fr edie">
+                        <i class="iconfont">&#xe642;</i>
+                        <i class="iconfont">&#xe634;</i>
+                    </li>
+                </ul>
             </div>
         </transition>
         <!-- 遮盖层 -->
@@ -130,13 +172,16 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom:0;
     .header{
+        position: fixed;
+        z-index: 99;
         height: 1rem;
         width: 100%;
         padding: 3/50rem 10/50rem;
         border-bottom: .001rem solid #EEEEF0;
         display: flex;
+        background-color: #fff;
         >.img{
             width: 45/50rem;
             height: 45/50rem;
@@ -176,7 +221,7 @@ export default {
         }
     }
     .links{
-        margin: 35/50rem 10/50rem;
+        margin: 85/50rem 10/50rem;
         box-sizing: border-box;
         >h3{
             font-size: 14/50rem;
@@ -237,7 +282,7 @@ export default {
         }
     }
     .userInfo{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 70/50rem;
@@ -280,6 +325,96 @@ export default {
                    overflow: hidden;
                    color:#fff;
                }
+               >.imgTop{
+                   width: 40/50rem;
+                   position: absolute;
+                   top: 15/50rem;
+                   right: 15/50rem;
+               }
+            }
+            >.Sign{
+                padding-right: 8/50rem;
+                margin-top: -20/50rem;
+                >img{
+                    width: 1rem;
+                }
+                >p{
+                    display: block;
+                    width: 1.2rem;
+                    height: 30/50rem;
+                    border: .01rem solid #F894E1;
+                    background-color: #fff;
+                    border-radius: 15/50rem;
+                    >span{
+                        display: block;
+                        width: 50/50rem;
+                        height: 25/50rem;
+                        line-height: 25/50rem;
+                        text-align: center;
+                        color:#fff;
+                        background-color: #F894E1;
+                        margin: 2.5/50rem auto;
+                        border-radius: 15/50rem;
+                    }
+                }
+            }
+        }
+        >.list{
+            >li{
+                line-height: 38/50rem;
+                padding: 0 10/50rem;
+                font-size: 18/50rem;
+                >i{
+                    font-size: 20/50rem;
+                }
+                &:nth-child(1){
+                    i{
+                        color:#FFDA69;
+                    }
+                }
+                &:nth-child(2){
+                    i{
+                        color:#48CFE5;
+                    }
+                }
+                &:nth-child(3){
+                    i{
+                        color:#8683EA;
+                    }
+                }
+                &:nth-child(4){
+                    i{
+                        color:#48CFE5;
+                    }
+                }
+                &:nth-child(5){
+                    border-bottom: .01rem solid #EEEEF0;
+                    i{
+                        color:#6C97EE;
+                    }
+                }
+                &:nth-child(6){
+                    i{
+                        color:#FB7199;
+                }
+                &:nth-child(7){
+                    i{
+                        color:#58D598;
+                    }
+                }
+                 &:nth-child(8){
+                    i{
+                        color:#FFB161;
+                    }
+                 }
+                }
+            }
+            >.edie{
+                >i{
+                    font-size: 25/50rem;
+                    padding-right: 8/50rem;
+                    color:#666;
+                }
             }
         }
     }
@@ -299,7 +434,7 @@ export default {
       transition: all 0.5s ease;
     }
     .mask{
-       position: absolute;
+       position: fixed;
         top: 0;
         left: 0;
         right: 0;

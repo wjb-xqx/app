@@ -36,13 +36,13 @@
         <!-- 注册 -->
         <div class="loginPage registerPage" v-show="!isLogin">
             <form action="" class="loginInfo">
-                  <div class="div">
+                  <div>
                       <i class="iconfont">&#xe628;</i>
                       <input type="text" placeholder="我的手机号码">
                   </div>
-                  <div class="">
+                  <div>
                       <i class="iconfont">&#xe67c;</i>
-                      <input type="text" placeholder="验证码">
+                      <input type="text" class="codeInput" placeholder="验证码">
                       <p>获取验证码</p>
                   </div>
                  <div>
@@ -139,6 +139,10 @@ export default {
                 font-family: KaiTi;
                 overflow: hidden;
             }
+            >.codeInput{
+                width: 50%!important;
+                overflow: hidden;
+            }
             >span{
                 position: absolute;
                 top: .12rem;
@@ -149,7 +153,7 @@ export default {
                 position: absolute;
                 top: 0rem;
                 right: .3rem;
-                width: 1.8rem;
+                width: 1.6rem;
                 text-align: center;
                 line-height: 30/50rem;
                 display: inline-block;
