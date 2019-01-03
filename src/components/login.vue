@@ -62,7 +62,6 @@
             </div>
 
         </div>
-         
     </div>
 </template>
 
@@ -72,6 +71,7 @@ export default {
     data(){
         return {
             ifDisplay:true,
+            ifDisplay1:true,
             isLogin:false,
             codeShow:false,
             showCode:true

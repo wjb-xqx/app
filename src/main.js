@@ -8,6 +8,11 @@ import '@/assets/styles/reset.css'
 
 import { Switch } from 'element-ui';
 Vue.component(Switch.name, Switch);
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
